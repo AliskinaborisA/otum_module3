@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'Simpsonfont';
+  src: url('../fonts/Simpsonfont.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.main-window {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #74E1FF;
+}
+
+.welcome-screen {
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out; 
+}
+
+.three-door-screen {
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out; 
+}
+
+.flappy-plane-screen {
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out; 
+}
+
+.reception-screen {
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out; 
+}
+
+.weather-screen {
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out; 
+}
+
+.active {
+    opacity: 1;
+    display: block;
+    visibility: visible;
+}

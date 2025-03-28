@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  background: #70c5ce;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Simpsonfont', sans-serif;
+}
+
+.gameContainer {
+  position: relative;
+  display: inline-block;
+}
+
+canvas {
+  background: #70c5ce;
+  border: 2px solid #000;
+}
+
+.scoreBoard {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+  color: yellow;
+  font-size: 24px;
+  pointer-events: none;
+}
+
+.exitButton {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+  cursor: pointer;
+  z-index: 100;
+}

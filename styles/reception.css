@@ -1,0 +1,211 @@
+/** Задний фон */
+.reception-screen {
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+    margin: 20px auto;
+    aspect-ratio: 1920 / 1080;
+    background-image: url('../assets/reception-background.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.back-icon {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.text-table {
+    display: inline-block;
+    background-color: #65B6CC;
+    border: 0.4em solid #000;
+    box-sizing: border-box;
+    padding: 5% 10%;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1vw;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+/** Часы */
+.clocks {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 3%;
+    left: 23%;
+}
+
+.clock-container {
+    text-align: center;
+}
+
+.clock {
+    position: relative;
+    width: 6vw;
+    height: 6vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    border: 0.4vw solid #000;
+    border-radius: 50%;
+    background: #fff;
+    margin-bottom: 0.5vw;
+}
+
+.hand {
+    position: absolute;
+    width: 50%;
+    background: #000;
+    top: 47%;
+    left: 50%;
+    transform-origin: 0 50%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.hand.hour {
+    width: 35%;
+    height: 5%;
+}
+
+.hand.minute {
+    width: 45%;
+    height: 4%;
+}
+
+.center {
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    background: #000;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/** Bell */
+.bell {
+    position: absolute;
+    height: auto;
+    width: 4.5%;
+    left: 65%;
+    top: 59.7%;
+    cursor: pointer;
+}
+
+.click-on-me-text {
+    font-size: 1.5vw;
+    color: white;
+    position: absolute;
+    top: 50%;
+    right: 28%;
+}
+
+/** Flowers */
+.flower {
+    width: 7vw;
+}
+
+.flower-1 {
+    position: absolute;
+    bottom: 5%;
+    left: 15%;
+}
+
+.flower-2 {
+    position: absolute;
+    bottom: 5%;
+    right: 15%;
+    transform: scaleX(-1);
+}
+
+/** Cloud mans */
+.chevron {
+    opacity: 0;
+    pointer-events: none;
+    cursor: pointer;
+    position: absolute;
+    width: 5%;
+    top: 50%;
+    transition: opacity 1s ease-in-out;
+}
+
+.left-chevron {
+    left: 5%;
+}
+
+.right-chevron {
+    right: 5%;
+}
+
+.man {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    width: 20vw;
+    top: 24.3%;
+    left: 40%;
+    cursor: pointer;
+
+    transition: opacity 1s ease-in-out;
+}
+
+.text {
+    opacity: 0;
+    position: absolute;
+    top: 30%;
+    right: 20%;
+    width: 20%;
+
+    transition: opacity 0.5s ease;
+}
+
+/* Анимации для вылета */
+@keyframes slideOutLeft {
+    from { transform: translate(-50%, 0%); }
+    to { transform: translate(-150vw, 0%); }
+}
+
+@keyframes slideOutRight {
+    from { transform: translate(-50%, 0%); }
+    to { transform: translate(150vw, 0%); }
+}
+
+.slide-out-left {
+    animation: slideOutLeft 0.5s forwards;
+}
+
+.slide-out-right {
+    animation: slideOutRight 0.5s forwards;
+}
+
+@keyframes bounceInLeft {
+    0% { transform: translate(-150vw, 0%); }
+    50% { transform: translate(10vw, 0%); }
+    100% { transform: translate(0vw, 0%); }
+}
+
+@keyframes bounceInRight {
+    0% { transform: translate(150vw, 0%); }
+    50% { transform: translate(-10vw, 0%); }
+    100% { transform: translate(0vw, 0%); }
+}
+
+.bounce-in-left {
+    animation: bounceInLeft 0.5s forwards;
+}
+
+.bounce-in-right {
+    animation: bounceInRight 0.5s forwards;
+}
+
+

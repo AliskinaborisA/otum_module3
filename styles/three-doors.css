@@ -1,0 +1,25 @@
+.three-door-screen-text {
+    font-size: 5vw;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Jost', sans-serif;
+}
+
+.doors-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.door-1, .door-2, .door-3 {
+    height: auto;
+    width: 20%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.door-1:hover, .door-2:hover, .door-3:hover {
+    transform: scale(1.05);
+}
+

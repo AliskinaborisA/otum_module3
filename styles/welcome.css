@@ -1,0 +1,124 @@
+.the-otum {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40%;
+    height: auto;
+    animation: appearLogo 2s ease-out forwards;
+    filter: blur(10px);
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.the-otum.animation-complete {
+    pointer-events: auto;
+}
+
+.the-otum.animation-complete:hover {
+    transform: translate(-50%, -50%) scale(1.1) !important;
+}
+
+@keyframes appearLogo {
+    0% {
+        filter: blur(10px);
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.3);
+    }
+    100% {
+        filter: blur(0);
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.cloud {
+    position: absolute;
+    height: auto;
+}
+
+.big-cloud {
+    width: 40vw;
+}
+
+.small-cloud {
+    width: 20vw;
+}
+
+.big-cloud-top-left { animation: spreadTopLeft 2s ease-out forwards; }
+.big-cloud-top-right { animation: spreadTopRight 2s ease-out forwards; }
+.big-cloud-bottom-left { animation: spreadBottomLeft 2s ease-out forwards; }
+.big-cloud-bottom-right { animation: spreadBottomRight 2s ease-out forwards; }
+.small-cloud-top { animation: spreadTop 2s ease-out forwards; }
+.small-cloud-right-1 { animation: spreadRight-1 2s ease-out forwards; }
+.small-cloud-right-2 { animation: spreadRight-2 2s ease-out forwards; }
+.small-cloud-bottom { animation: spreadBottom 2s ease-out forwards; }
+.small-cloud-left-1 { animation: spreadLeft-1 2s ease-out forwards; }
+.small-cloud-left-2 { animation: spreadLeft-2 2s ease-out forwards; }
+
+/* Big clouds animation */
+@keyframes spreadTopLeft {
+    from { top: 40%; left: 40%; }
+    to { top: 12%; left: 15%; }
+}
+
+@keyframes spreadTopRight {
+    from { top: 40%; left: 60%; }
+    to { top: 15%; left: 85%; }
+}
+
+@keyframes spreadBottomLeft {
+    from { top: 60%; left: 40%; }
+    to { top: 85%; left: 15%; }
+}
+
+@keyframes spreadBottomRight {
+    from { top: 60%; left: 60%; }
+    to { top: 85%; left: 80%; }
+}
+
+/* Small clouds animation */
+@keyframes spreadTop {
+    from { top: 50%; left: 50%; }
+    to { top: 10%; left: 50%; }
+}
+
+@keyframes spreadRight-1 {
+    from { top: 45%; left: 50%; }
+    to { top: 40%; left: 90%; }
+}
+
+@keyframes spreadRight-2 {
+    from { top: 55%; left: 50%; }
+    to { top: 60%; left: 90%; }
+}
+
+@keyframes spreadBottom {
+    from { top: 50%; left: 50%; }
+    to { top: 85%; left: 50%; }
+}
+
+@keyframes spreadLeft-1 {
+    from { top: 50%; left: 50%; }
+    to { top: 40%; left: 10%; }
+}
+
+@keyframes spreadLeft-2 {
+    from { top: 50%; left: 50%; }
+    to { top: 60%; left: 10%; }
+}
+
+@media(max-height: 600px) {
+    .small-cloud-top {
+        display: none;
+        visibility: hidden;
+    }
+    .small-cloud-bottom {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+
