@@ -168,7 +168,7 @@ document.addEventListener("keydown", function(e) {
     jump();
   }
 });
-document.addEventListener("click" || "touchstart", function() {
+document.addEventListener("touchstart", function() {
   jump();
 });
 
