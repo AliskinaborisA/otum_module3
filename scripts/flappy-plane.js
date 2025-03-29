@@ -1,7 +1,7 @@
 const exitButton = document.querySelector('.exitButton');
 const canvas = document.querySelector('.gameCanvas');
-canvas.width = window.innerWidth * 0.8;
-canvas.height = window.innerHeight * 0.8;
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 const ctx = canvas.getContext('2d');
 
 const airplaneImg = new Image();
