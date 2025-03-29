@@ -171,6 +171,9 @@ document.addEventListener("keydown", function(e) {
 document.addEventListener("click", function() {
   jump();
 });
+document.addEventListener("touchstart", function() {
+  jump();
+});
 
 function restartGame() {
   airplane = {
