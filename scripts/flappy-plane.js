@@ -168,10 +168,7 @@ document.addEventListener("keydown", function(e) {
     jump();
   }
 });
-document.addEventListener("click", function() {
-  jump();
-});
-document.addEventListener("touchstart", function() {
+document.addEventListener("click" || "touchstart", function() {
   jump();
 });
 
